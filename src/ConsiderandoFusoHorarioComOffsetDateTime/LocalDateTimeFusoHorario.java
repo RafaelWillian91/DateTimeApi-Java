@@ -12,7 +12,7 @@ public class LocalDateTimeFusoHorario {
         System.out.println(ldt1);
 
         //Local.... quer dizer que não está atrelado a alguma data ou hora de algum lugar do Mundo
-        //Para trabalhar com Fuso Horario, usamos a classe OffsetDateTime
+        //Para trabalhar com Fuso Horario, usamos a classe OffsetDateTime. ZoneOffset.UTC retorna o eixo zero
         OffsetDateTime off = OffsetDateTime.of(ldt1, ZoneOffset.UTC);
 
         System.out.println(off);//Saida é com final Z que é o horario base o 0
@@ -27,7 +27,7 @@ public class LocalDateTimeFusoHorario {
         OffsetDateTime offsetDateTime = OffsetDateTime.now();
         System.out.println(offsetDateTime);
 
-        //Passando uma data e hora e Fuso
+        //Passando uma data e hora considerando UTC - 3 horas
         OffsetDateTime offsetDateTime101 =  OffsetDateTime.of(2021, 03,25, 12, 0,0,0, ZoneOffset.of("-03:00"));
         System.out.println(offsetDateTime101);
 
