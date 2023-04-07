@@ -27,6 +27,8 @@ public class Dataexpiracao {
 
         System.out.println(myLocaldateTime);
 
+        System.out.println(Instant.now().atZone(zone));
+
     }
 
 
